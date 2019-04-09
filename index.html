@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>flex超出省略问题</title>
-		<style>
-			.flex{
-        display: flex;
-      }
-      .left{
-        flex:1 1 auto;
-        background: red;
-      }
-      .left p{
-        width: 100%;
-        text-overflow:ellipsis;
-        overflow:hidden;
-        white-space:nowrap;
-      }
-      .right{
-        background:green;
-        width: 200px;
-      }
-</style>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>flex超出省略问题</title>
+	<style>
+		.flex{
+			display: flex;
+		}
+		.left{
+			flex:1 1 auto;
+			background: red;
+		}
+		.left p{
+			width: 100%;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			white-space:nowrap;
+		}
+		.right{
+			background:green;
+			width: 200px;
+		}
+	</style>
+</head>
 	<body>
 		<div class="flex">
-		  <div class="left">
-		  	<p>我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局</p></div>
-		  <div class="right">我在右边，定宽</div>
+		  	<div class="left">
+				<p>我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局</p></div>
+		  	<div class="right">我在右边，定宽</div>
 		</div>
 		<div class="flex">
-		  <div class="left">
-		  	<p>我在左边，自适应布</p></div>
-		  <div class="right">我在右边，定宽</div>
-		</div>	</body>
+		  	<div class="left" style="width:0">
+				<p>我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局我在左边，自适应布局</p>
+			</div>
+			<div class="right">我在右边，定宽</div>
+		</div>	
+	</body>
 </html>
